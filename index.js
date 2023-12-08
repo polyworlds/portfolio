@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     lightbox.onclick = () => lightbox.classList.add('hidden');
 });
 
-
-
 function loadImages() {
     const baseUrl = 'http://sandboxtest.lol/wp-content/uploads/2023/12/';
     const media = [
@@ -31,44 +29,46 @@ function loadImages() {
         'largecamp-fire-final0001-0120.mp4',
         'largeGear-Asset.mp4',
         'fullKey-Board.png'
-    ].map(file => baseUrl + file); // Append the base URL to each file name
+    ].map(file => baseUrl + file); 
 
 
     const gallery = document.getElementById('gallery');
 
-
-    function getFileClass(filename) {
-        if (filename.includes('large')) return 'large';
-        if (filename.includes('small')) return 'small';
-        if (filename.includes('full')) return 'full';
-        return ''; // Default class if the filename does not include these prefixes
-    }
-    
-
-
-
-
     media.forEach(url => {
         const div = document.createElement('div');
         div.className = `tile ${getFileClass(url)}`;
-        div.onclick = () => showLightbox(url);
+        div.onclick = () => showLightbox(url, div);
 
         let content;
         if (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.mov')) {
             content = document.createElement('video');
-            content.muted = true; // Mute the video to allow autoplay
-            content.autoplay = false; // Autoplay the video
-            content.loop = true; // Optional: Loop the video
+            content.muted = true;
+            content.autoplay = false;
+            content.loop = true;
             content.controls = true;
         } else {
             content = document.createElement('img');
         }
-        content.src = url; // Set the source to the full URL
+        content.src = url;
 
         div.appendChild(content);
         gallery.appendChild(div);
     });
 }
 
+function getFileClass(filename) {
+    if (filename.includes('large')) return 'large';
+    if (filename.includes('small')) return 'small';
+    if (filename.includes('full')) return 'full';
+    return '';
+}
 
+function showLightbox(fileSrc, clickedDiv) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.innerHTML = '';
 
+    const clonedContent = clickedDiv.firstChild.cloneNode(true);
+    lightboxImage.appendChild(clonedContent);
+    lightbox.classList.remove('hidden');
+}
