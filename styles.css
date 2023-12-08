@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    box-sizing: border-box;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.tile {
+    margin: 5px; /* Adjust the margin as needed */
+    box-sizing: border-box;
+    overflow: hidden; /* To handle the content within the tiles */
+}
+
+.large {
+    width: calc(50% - 10px); /* Half of the container width minus margin */
+    height: auto;
+}
+
+.small {
+    width: calc(25% - 10px); /* A quarter of the container width minus margin */
+    height: auto;
+}
+
+.full {
+    width: calc(100% - 15px); /* Sum of 50% (large) and 25% (small) minus margin */
+    height: auto;
+}
+
+.tile img, .tile video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tile video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#lightbox {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above all other content */
+  
+}
+
+#lightbox-image {
+    /* Remove max-width and max-height if they're causing the issue */
+    display: flex; /* To center the content */
+    align-items: center; /* To center the content vertically */
+    justify-content: center; /* To center the content horizontally */
+    overflow: auto; /* Adds scrollbars if content is larger than the screen */
+}
+
+#lightbox-image img,
+#lightbox-image video {
+    max-width: 100%; /* Ensures the content is not wider than the screen */
+    max-height: 100vh; /* Ensures the content is not taller than the viewport */
+    object-fit: contain; /* Ensures the aspect ratio is maintained */
+}
+
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 1024px) {
+    .large {
+        width: calc(50% - 10px); /* possibly 100% if you want one column */
+    }
+
+    .small, .full {
+        width: calc(50% - 10px); /* adjust the size for smaller screens */
+    }
+}
+
+/* Mobile (portrait and landscape) */
+@media (max-width: 768px) {
+    .large, .small, .full {
+        width: calc(100% - 10px); /* make all tiles full width on small screens */
+    }
+}
