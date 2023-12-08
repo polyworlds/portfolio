@@ -57,8 +57,9 @@ function loadImages() {
         if (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.mov')) {
             content = document.createElement('video');
             content.muted = true; // Mute the video to allow autoplay
-            content.autoplay = true; // Autoplay the video
+            content.autoplay = false; // Autoplay the video
             content.loop = true; // Optional: Loop the video
+            content.controls = true;
         } else {
             content = document.createElement('img');
         }
@@ -68,3 +69,6 @@ function loadImages() {
         gallery.appendChild(div);
     });
 }
+
+
+
