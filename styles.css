@@ -50,7 +50,6 @@ html, body {
 }
 
 #lightbox {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -60,9 +59,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it's above all other content */
-  
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
+
 
 #lightbox-image {
     /* Remove max-width and max-height if they're causing the issue */
