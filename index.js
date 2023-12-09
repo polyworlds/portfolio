@@ -63,12 +63,16 @@ function getFileClass(filename) {
     return '';
 }
 
-function showLightbox(fileSrc, clickedDiv) {
+function showLightbox(fileSrc, clickedDiv) { 
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     lightboxImage.innerHTML = '';
 
     const clonedContent = clickedDiv.firstChild.cloneNode(true);
-    lightboxImage.appendChild(clonedContent);
-    lightbox.classList.remove('hidden');
+
+    // Check if the cloned content is an image
+    if (clonedContent.tagName === 'IMG') {
+        lightboxImage.appendChild(clonedContent);
+        lightbox.classList.remove('hidden');
+    }
 }
