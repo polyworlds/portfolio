@@ -8,27 +8,27 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadImages() {
     const baseUrl = 'https://polyworlds3d.s3.us-west-1.amazonaws.com/';
     const media = [
-        'Full Porsche Compressed.mp4',
-        'largeAntarctica-Actual-Final.png',
-        'largeJapanese-Temple-Scene.png',
-        'largeJackstand.png',
-        'largeJackstand-close-up.png',
-        'largeJackstand-close-up-2.png',
-        'largeJackstand-close-up-3.png',
-        'fullTiny-House-1.png',
-        'largeTiny-House-2.png',
-        'largeTiny-House-3.png',
-        'largeSleep-Model-Repeat.png',
-        'largeRoom1-close-up-2.png',
-        'largeRoom1-close-up-3.png',
-        'largeRoom1-close-up.png',
-        'smallWizard.mp4',
-        'smallDesert-Wizard-2.png',
-        'smallDesert-Wizard-3.png',
-        'smallDesert-Wizard-Close.png',
-        'largecamp-fire-final0001-0120.mp4',
-        'largeGear-Asset.mp4',
-        'fullKey-Board.png'
+        'FullPorscheCompressed.mp4',
+        'LargeAntarcticacompressed.png',
+        'LargeJapaneseTempleScene.png',
+        'LargeJackstandStand2.png',
+        'LargeJackstandcloseup.png',
+        'LargeJackstandcloseup2.png',
+        'LargeJackstandcloseup3.png',
+        'FullTinyHouse1.png',
+        'LargeTinyHouse2.png',
+        'LargeLargeTinyHouse3.png',
+        'LargeSleepModelRepeat.png',
+        'LargeRoom1closeup2.png',
+        'LargeRoom1closeup3.png',
+        'LargeRoom1closeup.png',
+        'SmallWizard.mp4',
+        'SmallDesertWizard2.png',
+        'SmallDesertWizard3.png',
+        'SmallDesertWizardClose.png',
+        'Largecampfirefinal0001-0120.mp4',
+        'LargeGearAsset.mp4',
+        'FullKeyBoard.png'
     ].map(file => baseUrl + file); 
 
 
