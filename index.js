@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadImages() {
-    const baseUrl = 'http://sandboxtest.lol/wp-content/uploads/2023/12/';
+    const baseUrl = 'https://polyworlds3d.s3.us-west-1.amazonaws.com/';
     const media = [
-        'fullPorsche-911-FINAL.mov',
+        'Full Porsche Compressed.mp4',
         'largeAntarctica-Actual-Final.png',
         'largeJapanese-Temple-Scene.png',
         'largeJackstand.png',
@@ -57,9 +57,9 @@ function loadImages() {
 }
 
 function getFileClass(filename) {
-    if (filename.includes('large')) return 'large';
-    if (filename.includes('small')) return 'small';
-    if (filename.includes('full')) return 'full';
+    if (filename.includes('Large')) return 'large';
+    if (filename.includes('Small')) return 'small';
+    if (filename.includes('Full')) return 'full';
     return '';
 }
 
