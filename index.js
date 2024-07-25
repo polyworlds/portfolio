@@ -9,26 +9,26 @@ function loadImages() {
     const baseUrl = 'https://polyworlds3d.s3.us-west-1.amazonaws.com/';
     const media = [
         'FullPorscheCompressed.mp4',
-        'FullTinyHouse1.jpeg',
-        'LargeTinyHouse2.jpeg',
-        'LargeLargeTinyHouse3.jpeg',
-        'LargeAntarcticacompressed.jpeg',
-        'LargeJapaneseTempleScene.jpeg',
-        'LargeJackstandStand2.jpeg',
-        'LargeJackstandcloseup.jpeg',
-        'LargeJackstandcloseup2.jpeg',
-        'LargeJackstandcloseup3.jpeg',
-        'LargeSleepModelRepeat.jpeg',
-        'LargeRoom1closeup2.jpeg',
-        'LargeRoom1closeup3.jpeg',
-        'LargeRoom1closeup.jpeg',
+        'FullTinyHouse1.jpg',
+        'LargeTinyHouse2.jpg',
+        'LargeLargeTinyHouse3.jpg',
+        'LargeAntarcticacompressed.jpg',
+        'LargeJapaneseTempleScene.jpg',
+        'LargeJackstandStand2.jpg',
+        'LargeJackstandcloseup.jpg',
+        'LargeJackstandcloseup2.jpg',
+        'LargeJackstandcloseup3.jpg',
+        'LargeSleepModelRepeat.jpg',
+        'LargeRoom1closeup2.jpg',
+        'LargeRoom1closeup3.jpg',
+        'LargeRoom1closeup.jpg',
         'SmallWizard.mp4',
-        'SmallDesertWizard2.jpeg',
-        'SmallDesertWizard3.jpeg',
-        'SmallDesertWizardClose.jpeg',
+        'SmallDesertWizard2.jpg',
+        'SmallDesertWizard3.jpg',
+        'SmallDesertWizardClose.jpg',
         'Largecampfirefinal0001-0120.mp4',
         'LargeGearAsset.mp4',
-        'FullKeyBoard.jpeg'
+        'FullKeyBoard.jpg'
     ].map(file => baseUrl + file); 
 
 
