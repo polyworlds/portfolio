@@ -9,6 +9,9 @@ function loadImages() {
     const baseUrl = 'https://polyworlds3d.s3.us-west-1.amazonaws.com/';
     const media = [
         'FullPorscheCompressed.mp4',
+        'FullTinyHouse1.png',
+        'LargeTinyHouse2.png',
+        'LargeLargeTinyHouse3.png',
         'LargeAntarcticacompressed.png',
         'LargeJapaneseTempleScene.png',
         'LargeJackstandStand2.png',
